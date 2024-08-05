@@ -1,0 +1,137 @@
+/* index.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.input-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--first-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-group button:hover {
+    background: var(--second-color);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ranksTable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    display: none;
+}
+
+#ranksTable th, #ranksTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#ranksTable th {
+    background: var(--first-color);
+    color: white;
+}
+
+#ranksTable tbody tr:nth-child(even) {
+    background: var(--fourth-color);
+}
+
+#ranksTable tbody tr:hover {
+    background: var(--third-color);
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+button, input, #ranksTable, .user-image {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Custom colors */
+:root {
+    --first-color: #5585b5;
+    --second-color: #53a8b6;
+    --third-color: #79c2d0;
+    --fourth-color: #bbe4e9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .input-group input, .input-group button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .input-group button, .input-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Ranks</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <button id="showRanksBtn">Show Ranks</button>
+        </div>
+        <div class="input-group">
+            <input type="number" id="rankInput" placeholder="Enter Rank">
+            <button id="searchByRankBtn">Search by Rank</button>
+        </div>
+        <div class="input-group">
+            <input type="text" id="idInput" placeholder="Enter Student ID">
+            <button id="searchByIdBtn">Search by ID</button>
+        </div>
+        
+        <div id="results"></div>
+        <img id="userImage" src="" alt="User Image" class="user-image" style="display:none;">
+
+        <!-- Table for showing ranks -->
+        <table id="ranksTable" style="width:100%; border-collapse:collapse; display:none;">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>ID</th>
+                    <th>Average Grade</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="ranksTableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
